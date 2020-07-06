@@ -1,0 +1,27 @@
+logging:
+  level:
+    root: ERROR
+
+server:
+  port: 8080
+  servlet:
+    context-path: /accesstoken
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
+  shutdown: graceful
+
+management:
+  health:
+    probes:
+      enabled: true
+
+spring:
+  profiles:
+    active: '@profileActive@'
+  lifecycle:
+    timeout-per-shutdown-phase: 20s
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
